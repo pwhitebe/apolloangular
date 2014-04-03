@@ -1,0 +1,36 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">Summary</div>
+  <div class="panel-body">
+    <h1>Name: {{node.name}}</h1>
+    <h2>type: {{labels.join()}}</h2>
+    <h3>id: {{node.id}}</h3>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Node Attributes</div>
+  <div class="panel-body">
+    <table class="table table-condensed">
+      <tr ng-repeat="att in node.attributes">
+        <td class="text-right"><strong>{{att.key}}</strong></td>
+        <td>{{att.value}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div ng-repeat="relation in relations">
+  <div class="panel panel-default">
+    <div class="panel-heading">Related {{relation.name}}s</div>
+    <div class="panel-body">
+      <div ng-repeat="relType in relation.relTypes">		
+        <h3>{{relType.name}}</h3>
+        <table class="table table-condensed">
+          <tr ng-repeat="node in relType.nodes">
+            <td class="col-xs-1"><a href="/apollo/node/{{node.id}}"><strong>{{node.id}}</strong></a></td>
+            <td>{{node.name}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

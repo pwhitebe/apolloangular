@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apolloApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apollo</title>
+    <link rel="stylesheet" href="/apollo/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/apollo/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/apollo/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/apollo/css/sticky-footer-navbar.css">
+    <link rel="stylesheet" href="/apollo/css/animation.css">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header"><a href="/apollo/" class="navbar-brand">Apollo</a>
+          <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div id="navbar-main" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#/faq">Faq</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Nodes<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/node/P1">Node P1</a></li>
+                <li><a href="#/node/P2">Node P2</a></li>
+                <li><a href="#/node/P3">Node P3</a></li>
+                <li><a href="#/node/C1">Node C1</a></li>
+                <li><a href="#/node/C2">Node C2</a></li>
+                <li><a href="#/node/C3">Node C3</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" target="_blank">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section class="content">
+        <div id="ng-view" ng-view></div>
+      </section>
+    </div>
+    <script type="text/javascript" src="/apollo/vendor/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/apollo/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/apollo/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="/apollo/vendor/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/apollo/vendor/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/apollo/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/apollo/js/app.js"></script>
+    <script src="/apollo/js/animations.js"></script>
+    <script src="/apollo/js/controllers.js"></script>
+    <script src="/apollo/js/filters.js"></script>
+    <script src="/apollo/js/services.js"></script>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 2014 CDC.	</p>
+      </div>
+    </div>
+  </body>
+</html>
